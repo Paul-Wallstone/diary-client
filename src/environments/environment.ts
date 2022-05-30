@@ -3,9 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrl: 'http://localhost:8081',
+  apiUrl: '/api/v1'
 };
-
+export const getURL = ((url: string) => `${environment.baseUrl + environment.apiUrl}/${url}`);
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
